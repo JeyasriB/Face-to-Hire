@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mock Interview Levels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Demo Interview Questions</h1>
+    <h3>Choose Your Interview Level</h3>
+    <button onclick="selectLevel('easy')">Easy</button>
+    <button onclick="selectLevel('intermediate')">Intermediate</button>
+    <button onclick="selectLevel('hard')">Hard</button>
+  </div>
+
+  <script>
+    function selectLevel(level) {
+      localStorage.setItem("interviewLevel", level);
+      window.location.href = "chat.html";
+    }
+  </script>
+</body>
+</html>

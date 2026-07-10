@@ -1,0 +1,405 @@
+
+
+CREATE TABLE roles1 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    role_name VARCHAR(100) NOT NULL,
+    skills TEXT NOT NULL,
+    programming_languages TEXT NOT NULL,
+    interview_rounds TEXT NOT NULL,
+    basic_questions TEXT NOT NULL, -- store 5 questions separated by |
+    platform_prepare_aptitude TEXT NOT NULL, -- format: Name|URL,Name|URL
+    platform_prepare_interview TEXT NOT NULL, -- format: Name|URL,Name|URL
+    platform_prepare_communication TEXT NOT NULL, -- format: Name|URL,Name|URL
+    salary_package VARCHAR(50) NOT NULL
+    
+);
+
+-- Step 3: Insert 30 Roles
+INSERT INTO roles1 
+(role_name, skills, programming_languages, interview_rounds, basic_questions, 
+ platform_prepare_aptitude, platform_prepare_interview, platform_prepare_communication, 
+ salary_package)
+VALUES
+-- 1. Data Analyst
+('Data Analyst',
+ 'Python, SQL, Excel, Tableau, Power BI',
+ 'Python, R',
+ 'Resume Screening, Aptitude Test, Technical Interview, HR Interview',
+ 'What is normalization in databases?|Explain different types of joins in SQL.|How do you handle missing values in a dataset?|What is the difference between correlation and causation?|How would you explain data visualization to a non-technical person?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'LeetCode|https://leetcode.com,Kaggle|https://www.kaggle.com,StrataScratch|https://www.stratascratch.com',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org,LinkedIn Learning|https://www.linkedin.com/learning',
+ '6-10 LPA'
+ ),
+
+-- 2. Software Developer
+('Software Developer',
+ 'Problem Solving, DSA, OOP, System Design, Git',
+ 'C, C++, Java, Python',
+ 'Online Coding Test, Technical Round 1, Technical Round 2, HR Interview',
+ 'Explain OOP concepts.|Difference between stack and queue.|What is multithreading?|Explain garbage collection in Java.|What are REST APIs?',
+ 'IndiaBix|https://www.indiabix.com,GeeksforGeeks Aptitude|https://practice.geeksforgeeks.org',
+ 'LeetCode|https://leetcode.com,HackerRank|https://www.hackerrank.com,Codeforces|https://codeforces.com',
+ 'Coursera|https://www.coursera.org,EnglishClub|https://www.englishclub.com',
+ '7-12 LPA'
+ ),
+-- 3. Web Developer
+('Web Developer',
+ 'HTML, CSS, JavaScript, Responsive Design',
+ 'JavaScript, PHP',
+ 'Portfolio Screening, Coding Task, Technical Round, HR Round',
+ 'What are semantic tags in HTML?|Difference between inline, block, and inline-block.|How does CSS Flexbox work?|Explain event bubbling in JavaScript.|What is AJAX?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'FreeCodeCamp|https://www.freecodecamp.org,W3Schools|https://www.w3schools.com,MDN Docs|https://developer.mozilla.org',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '5-9 LPA'
+),
+
+-- 4. Data Scientist
+('Data Scientist',
+ 'Machine Learning, Data Cleaning, Statistics, Big Data, Visualization',
+ 'Python, R, SQL',
+ 'Resume Shortlisting, Technical Interview, Case Study, HR Interview',
+ 'Explain supervised vs unsupervised learning.|What is overfitting in ML?|How do you handle imbalanced datasets?|What is PCA?|Explain confusion matrix.',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Kaggle|https://www.kaggle.com,Coursera ML|https://www.coursera.org/learn/machine-learning',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '10-18 LPA'
+ ),
+
+-- 5. Cloud Engineer
+('Cloud Engineer',
+ 'Cloud Platforms, AWS, Azure, GCP, Docker, Kubernetes',
+ 'Python, Go, Java',
+ 'Aptitude Test, Cloud Lab Test, Technical Round, HR Interview',
+ 'What is cloud computing?|Explain difference between IaaS, PaaS, SaaS.|What is serverless architecture?|Explain VPC.|What is load balancing?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'AWS Training|https://aws.amazon.com/training,Azure Learn|https://learn.microsoft.com/en-us/training',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '9-15 LPA'
+ ),
+
+-- 6. UI/UX Designer
+('UI/UX Designer',
+ 'Wireframing, Prototyping, Figma, Adobe XD',
+ 'HTML, CSS, JavaScript',
+ 'Portfolio Review, Design Task, Technical Interview, HR Round',
+ 'What is user-centered design?|Difference between UX and UI?|Explain usability testing.|What tools do you use for prototyping?|How do you measure design success?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'Figma Learn|https://help.figma.com,Adobe XD Tutorials|https://helpx.adobe.com/xd',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Grammarly|https://grammarly.com',
+ '5-8 LPA'
+ ),
+
+-- 7. Cybersecurity Analyst
+('Cybersecurity Analyst',
+ 'Network Security, Vulnerability Analysis, SIEM,Firewalls, Threat Analysis',
+ 'Python, Bash',
+ 'Aptitude Test, Technical Round, Security Scenario Round, HR Interview',
+ 'What is penetration testing?|Explain difference between IDS and IPS.|What is SQL injection?|How do you secure a web application?|What is encryption?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Cybrary|https://www.cybrary.it,EC-Council|https://www.eccouncil.org',
+ 'Toastmasters|https://www.toastmasters.org,Grammarly|https://grammarly.com',
+ '8-14 LPA'
+ ),
+
+-- 8. Network Engineer
+('Network Engineer',
+ 'Routing, Switching, TCP/IP, Firewalls',
+ 'Python, Shell',
+ 'Written Test, Technical Interview, Network Lab Test, HR Round',
+ 'What is subnetting?|Explain OSI model.|What is the difference between TCP and UDP?|What is VLAN?|What are firewalls?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'Cisco Academy|https://www.netacad.com,Juniper Learning|https://learningportal.juniper.net',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '6-11 LPA'
+ ),
+
+-- 9. Database Administrator
+('Database Administrator',
+ 'Database Design, Backup, Recovery, Oracle, Backup Systems',
+ 'SQL, PL/SQL,MySQL, MongoDB',
+ 'Aptitude Test, Technical Round 1, Practical Round, HR Round',
+ 'What is indexing in DBMS?|Explain normalization.|What is replication?|What is ACID property?|What is sharding?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Oracle Academy|https://academy.oracle.com,MySQL Docs|https://dev.mysql.com',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '7-13 LPA'
+ ),
+
+-- 10. Mobile App Developer
+('Mobile App Developer',
+ 'App Development, UI/UX, APIs, Android, iOS, Flutter, React Native',
+ 'Java, Kotlin, Swift, Dart',
+ 'Coding Test, Technical Interview, App Demo, HR Round',
+ 'Explain difference between native and hybrid apps.|What is Android Activity lifecycle?|What is Core Data in iOS?|What is Flutter?|Explain REST API usage in apps.',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'Android Developer Docs|https://developer.android.com,Apple Developer|https://developer.apple.com',
+ 'Grammarly|https://grammarly.com,LinkedIn Learning|https://www.linkedin.com/learning',
+ '6-12 LPA'
+),
+
+-- 11. DevOps Engineer
+('DevOps Engineer',
+ 'CI/CD, GitHub Actions, Docker, Kubernetes',
+ 'Python, Bash, Go',
+ 'Aptitude Test, Coding Round, Technical Interview, HR Round',
+ 'What is CI/CD?|What is containerization?|Explain difference between Docker and VM.|What is Kubernetes?|Explain Infrastructure as Code.',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'Docker Docs|https://docs.docker.com,Kubernetes Docs|https://kubernetes.io/docs',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '9-16 LPA'
+ ),
+
+-- 12. AI Engineer
+('AI Engineer',
+ 'Deep Learning, Neural Networks, NLP, Transformers, Gen AI',
+ 'Python, R',
+ 'Resume Shortlisting, Coding Test, Technical Round, HR Interview',
+ 'What is NLP?|Explain CNN.|What is backpropagation?|What is reinforcement learning?|Difference between AI and ML?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'TensorFlow Docs|https://www.tensorflow.org,Pytorch Docs|https://pytorch.org/docs',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '12-20 LPA'
+),
+
+-- 13. Business Analyst
+('Business Analyst',
+ 'Requirement Gathering, Documentation,Requirement Analysis, Excel, Power BI, SQL',
+ 'SQL, Excel',
+ 'Resume Screening, Case Study, Technical Round, HR Round',
+ 'What is requirement analysis?|Difference between functional and non-functional requirements?|What is gap analysis?|Explain use case diagrams.|How do you prioritize requirements?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Coursera BA|https://www.coursera.org,BABOK Guide|https://www.iiba.org',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '6-11 LPA'
+ ),
+
+-- 14. Product Manager
+('Product Manager',
+ 'Market Research, Roadmap, Leadership,Agile, Scrum, JIRA, Leadership',
+ 'SQL, Python',
+ 'Resume Review, Case Study, Technical Round, HR Interview',
+ 'What is product lifecycle?|Explain MVP.|How do you gather customer feedback?|What is roadmap?|What is backlog grooming?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'Coursera PM|https://www.coursera.org,Udemy PM|https://www.udemy.com',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Grammarly|https://grammarly.com',
+ '12-22 LPA'
+ ),
+
+-- 15. Game Developer
+('Game Developer',
+ 'Game Engines, Graphics, Physics',
+ 'C++, C#, Unity, Unreal',
+ 'Coding Test, Game Demo, Technical Round, HR Interview',
+ 'What is game loop?|Explain difference between Unity and Unreal.|What is collision detection?|What is FPS in gaming?|Explain shaders.',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Unity Learn|https://learn.unity.com,Unreal Docs|https://docs.unrealengine.com',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '6-14 LPA'
+),
+
+-- 16. QA Engineer
+('QA Engineer',
+ 'Testing, Automation, Bug Tracking, Selenium, JUnit,',
+ 'Java, Python, Selenium',
+ 'Aptitude Test, Technical Round, Bug Hunt Round, HR Interview',
+ 'What is regression testing?|Difference between black box and white box testing?|What is automation testing?|Explain test case design.|What is UAT?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Selenium Docs|https://www.selenium.dev,TestNG Docs|https://testng.org',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Grammarly|https://grammarly.com',
+ '5-10 LPA'
+ ),
+
+-- 17. Blockchain Developer
+('Blockchain Developer',
+ 'Smart Contracts, Cryptography, DApps,Smart Contracts, Ethereum, Solidity',
+ 'Solidity, JavaScript, Python',
+ 'Coding Test, Smart Contract Round, Technical Round, HR Interview',
+ 'What is blockchain?|Explain consensus algorithm.|What is smart contract?|What is Ethereum?|Difference between private and public blockchain?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Ethereum Docs|https://ethereum.org,Solidity Docs|https://docs.soliditylang.org',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '10-18 LPA'
+),
+
+-- 18. System Administrator
+('System Administrator',
+ 'Linux, Windows Server, Networking',
+ 'Shell, Python',
+ 'Aptitude Test, Practical Test, Technical Interview, HR Interview',
+ 'What is DNS?|Explain DHCP.|What is RAID?|Difference between Linux and Unix?|What is virtualization?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'RedHat Docs|https://www.redhat.com,Microsoft Docs|https://learn.microsoft.com',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Grammarly|https://grammarly.com',
+ '5-9 LPA'
+),
+
+-- 19. IT Support Specialist
+('IT Support Specialist',
+ 'Troubleshooting, Hardware, Software Support',
+ 'None',
+ 'Written Test, Technical Interview, HR Interview',
+ 'What is troubleshooting?|How do you resolve network issues?|What is BIOS?|Difference between hardware and software issue?|How to reset a system password?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'CompTIA ITF+|https://www.comptia.org,Microsoft Learn|https://learn.microsoft.com',
+ 'Toastmasters|https://www.toastmasters.org,Grammarly|https://grammarly.com',
+ '3-6 LPA'
+ ),
+
+-- 20. Machine Learning Engineer
+('Machine Learning Engineer',
+ 'ML Algorithms, Feature Engineering, Model Deployment',
+ 'Python, R, SQL',
+ 'Resume Screening, Coding Round, Technical Interview, HR Interview',
+ 'Explain supervised learning.|What is overfitting?|What is regularization?|What is decision tree?|What is gradient descent?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Kaggle|https://www.kaggle.com,Scikit Learn|https://scikit-learn.org',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '10-17 LPA'
+),
+
+-- 21. Full Stack Developer
+('Full Stack Developer',
+ 'Frontend, Backend, APIs, Databases',
+ 'JavaScript, Python, PHP, Java',
+ 'Coding Test, Technical Round 1, Technical Round 2, HR Interview',
+ 'What is REST API?|Explain difference between SQL and NoSQL.|What is MVC architecture?|Explain CORS.|What are microservices?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'FreeCodeCamp|https://www.freecodecamp.org,GeeksforGeeks|https://www.geeksforgeeks.org',
+ 'Grammarly|https://grammarly.com,LinkedIn Learning|https://www.linkedin.com/learning',
+ '8-15 LPA'
+ ),
+
+-- 22. Systems Analyst
+('Systems Analyst',
+ 'System Design, Requirement Analysis, Documentation',
+ 'SQL, Java',
+ 'Resume Screening, Technical Interview, HR Interview',
+ 'What is system analysis?|Difference between system analyst and business analyst?|What is feasibility study?|Explain DFD.|What is UML?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Coursera|https://www.coursera.org,Udemy|https://www.udemy.com',
+ 'Toastmasters|https://www.toastmasters.org,Grammarly|https://grammarly.com',
+ '6-12 LPA'
+ ),
+
+-- 23. ERP Consultant
+('ERP Consultant',
+ 'ERP Modules, Business Process, Customization',
+ 'SQL, ABAP',
+ 'Resume Shortlisting, Technical Interview, HR Interview',
+ 'What is ERP?|Explain SAP modules.|What is customization in ERP?|Difference between ERP and CRM?|What is integration?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'SAP Help|https://help.sap.com,Oracle ERP Docs|https://docs.oracle.com',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '9-16 LPA'
+ ),
+
+-- 24. Digital Marketing Specialist
+('Digital Marketing Specialist',
+ 'SEO, SEM, Social Media, Analytics',
+ 'HTML, CSS, JavaScript',
+ 'Resume Review, Case Study, Technical Round, HR Interview',
+ 'What is SEO?|What is PPC?|Explain keyword research.|What is CTR?|Difference between organic and paid traffic?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Google Skillshop|https://skillshop.withgoogle.com,HubSpot Academy|https://academy.hubspot.com',
+ 'Grammarly|https://grammarly.com,LinkedIn Learning|https://www.linkedin.com/learning',
+ '5-9 LPA'
+),
+
+-- 25. HR Specialist
+('HR Specialist',
+ 'Recruitment, Training, Employee Engagement',
+ 'None',
+ 'Resume Review, Case Study, HR Interview',
+ 'What is recruitment?|What is performance appraisal?|Explain payroll.|What is employee engagement?|What is onboarding?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'SHRM|https://www.shrm.org,Coursera HR|https://www.coursera.org',
+ 'Toastmasters|https://www.toastmasters.org,Grammarly|https://grammarly.com',
+ '4-8 LPA'
+),
+
+-- 26. Financial Analyst
+('Financial Analyst',
+ 'Financial Modeling, Excel, Investment Analysis',
+ 'Excel, SQL, Python',
+ 'Aptitude Test, Technical Round, Case Study, HR Interview',
+ 'What is ROI?|What is NPV?|Explain financial modeling.|What is IRR?|Difference between asset and liability?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'Coursera Finance|https://www.coursera.org,CFA Institute|https://www.cfainstitute.org',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '7-14 LPA'
+ ),
+
+-- 27. Content Writer
+('Content Writer',
+ 'SEO Writing, Research, Editing',
+ 'None',
+ 'Portfolio Review, Writing Test, HR Interview',
+ 'What is plagiarism?|How do you write SEO content?|Difference between blog and article?|What is meta description?|What tools do you use for writing?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Grammarly|https://grammarly.com,Hemingway App|https://hemingwayapp.com',
+ 'Toastmasters|https://www.toastmasters.org,LinkedIn Learning|https://www.linkedin.com/learning',
+ '3-6 LPA'
+),
+
+-- 28. Research Scientist
+('Research Scientist',
+ 'Research, Data Analysis, Publications',
+ 'Python, R',
+ 'Resume Shortlisting, Technical Round, Research Proposal, HR Interview',
+ 'What is hypothesis testing?|What is peer review?|Explain methodology.|What is literature review?|How do you handle research ethics?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'ResearchGate|https://www.researchgate.net,Google Scholar|https://scholar.google.com',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '12-22 LPA'
+),
+
+-- 29. Robotics Engineer
+('Robotics Engineer',
+ 'Robotics, Control Systems, Sensors',
+ 'C++, Python, MATLAB',
+ 'Coding Test, Lab Test, Technical Interview, HR Interview',
+ 'What is robotics?|Explain sensors in robotics.|What is path planning?|What is control system?|What is AI in robotics?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'ROS Docs|https://www.ros.org,Arduino Docs|https://docs.arduino.cc',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '10-18 LPA'
+),
+
+-- 30. Biomedical Engineer
+('Biomedical Engineer',
+ 'Medical Devices, Imaging, Instrumentation',
+ 'MATLAB, Python',
+ 'Resume Screening, Technical Round, Lab Test, HR Interview',
+ 'What is biomedical engineering?|What is MRI?|What is ECG?|Explain prosthetics.|What is bioinformatics?',
+ 'PrepInsta|https://prepinsta.com,IndiaBix|https://www.indiabix.com',
+ 'WHO Training|https://www.who.int,NIH Training|https://www.nih.gov',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '8-15 LPA'
+),
+-- 31. SEO Specialist
+
+('SEO Specialist',
+ 'SEO, SEM, Content Optimization, Analytics',
+ 'HTML, CSS, Basic JS',
+ 'Resume Screening, Aptitude Test, Technical Interview, HR Interview',
+ 'What is SEO?|Explain difference between on-page and off-page SEO?|What is keyword research?|What is backlink?|How do you measure SEO success?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'Google Skillshop|https://skillshop.withgoogle.com,HubSpot Academy|https://academy.hubspot.com',
+ 'Grammarly|https://grammarly.com,Toastmasters|https://www.toastmasters.org',
+ '4-8 LPA'
+),
+
+-- 32. AI Researcher
+('AI Researcher',
+ 'Machine Learning, Deep Learning, NLP, Research',
+ 'Python, R, MATLAB',
+ 'Resume Shortlisting, Technical Round, Research Proposal, HR Interview',
+ 'What is NLP?|Explain CNN and RNN.|What is overfitting and how to prevent it?|What is reinforcement learning?|How do you evaluate AI model performance?',
+ 'IndiaBix|https://www.indiabix.com,PrepInsta|https://prepinsta.com',
+ 'TensorFlow Docs|https://www.tensorflow.org,Pytorch Docs|https://pytorch.org/docs',
+ 'LinkedIn Learning|https://www.linkedin.com/learning,Toastmasters|https://www.toastmasters.org',
+ '15-25 LPA');
+
+

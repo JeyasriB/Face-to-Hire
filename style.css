@@ -1,0 +1,79 @@
+/* ================= General Reset ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* ================= Login Page ================= */
+.login-body {
+    background:url("images/pic1.jpg") no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgba(117, 111, 111, 0);
+    padding: 25px 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 340px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #007BFF;
+}
+
+.login-container input,
+.login-container select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-toggle {
+    margin-bottom: 15px;
+}
+
+.form-toggle button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    background: #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-toggle .active {
+    background: #007BFF;
+    color: white;
+}
+
+.btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #0056b3;
+}
